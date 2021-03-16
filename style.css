@@ -176,11 +176,55 @@ main {
   margin: 0 0.5rem 0 0;
 }
 
+@media (min-width: 55em) {
+  body {
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: bottom;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 65rem;
+  }
 
-@media(min-width:62.5em){
-    main{
-        max-width: 90rem;
-    }
+  .left-container {
+    width: 40%;
+    margin: 0 2rem 0 0;
+  }
+
+  .right-container {
+    width: 60%;
+    margin: 0;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .white-container {
+    width: 30%;
+    height: 4rem;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+    top: -2rem;
+  }
+
+  .white-container::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 1.5rem solid white;
+    border-left: 1.5rem solid transparent;
+    bottom: -1.3rem;
+    right: 0;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 3rem;
+  }
 }
 
 .attribution {
